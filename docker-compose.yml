@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  strapi-db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: 'strapi'
+      MYSQL_USER: 'strapi'
+      MYSQL_PASSWORD: 'strapi'
+      MYSQL_ROOT_PASSWORD: 'strapi'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - strapi-db:/var/lib/mysql
+volumes:
+  strapi-db:
