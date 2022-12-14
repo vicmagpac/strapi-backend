@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   strapi-db:
-    image: mysql
+    image: mysql:5.7
     environment:
       MYSQL_DATABASE: 'strapi'
       MYSQL_USER: 'strapi'
@@ -12,6 +12,6 @@ services:
     expose:
       - '3306'
     volumes:
-      - strapi-db:/var/lib/mysql
+      - strapi_db:/var/lib/mysql
 volumes:
-  strapi-db:
+  strapi_db:
